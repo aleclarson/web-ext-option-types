@@ -1,0 +1,12 @@
+{
+  "name": "web-ext-option-types",
+  "version": "0.0.0",
+  "description": "Type definitions for web-ext CLI options",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleclarson/web-ext-cli-options.git"
+  },
+  "license": "MIT"
+}
