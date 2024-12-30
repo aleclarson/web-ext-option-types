@@ -124,8 +124,8 @@ function renderInterface(command, options, typeOverrides) {
       jsType = typeOverrides[optionPath]
     } else if (jsType === 'array') {
       jsType = option.choices
-        ? `(${option.choices.map((choice) => `'${choice}'`).join(' | ')})[]`
-        : 'string[]'
+        ? `readonly (${option.choices.map((choice) => `'${choice}'`).join(' | ')})[]`
+        : 'readonly string[]'
     }
     if (!option.demandOption) {
       jsType += ' | undefined'
