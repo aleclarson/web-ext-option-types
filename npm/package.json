@@ -8,5 +8,8 @@
     "type": "git",
     "url": "git+https://github.com/aleclarson/web-ext-option-types.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "metadata": {
+    "web-ext.version": "8.3.0"
+  }
 }
