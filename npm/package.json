@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aleclarson/web-ext-cli-options.git"
+    "url": "git+https://github.com/aleclarson/web-ext-option-types.git"
   },
   "license": "MIT"
 }
