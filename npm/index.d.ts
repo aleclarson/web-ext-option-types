@@ -1,3 +1,5 @@
+export type BrowserTarget = 'firefox-desktop' | 'firefox-android' | 'chromium'
+
 export interface RunOptions {
   /**
    * The extensions runners to enable. Specify this option multiple times to run 
@@ -5,7 +7,7 @@ export interface RunOptions {
    *
    * @default "firefox-desktop"
    */
-  target: ('firefox-desktop' | 'firefox-android' | 'chromium')[] | undefined
+  target: BrowserTarget | readonly BrowserTarget[] | undefined
   /**
    * Path or alias to a Firefox executable such as firefox-bin or firefox.exe. If 
    * not specified, the default Firefox will be used. You can specify the following 
@@ -48,13 +50,13 @@ export interface RunOptions {
    * Reload the extension only when the contents of this file changes. This is 
    * useful if you use a custom build process for your extension
    */
-  watchFile?: string[] | undefined
+  watchFile?: readonly string[] | undefined
   /**
    * Paths and globs patterns that should not be watched for changes. This is useful 
    * if you want to explicitly prevent web-ext from watching part of the extension 
    * directory tree, e.g. the node_modules folder.
    */
-  watchIgnored?: string[] | undefined
+  watchIgnored?: readonly string[] | undefined
   /**
    * Pre-install the extension into the profile before startup. This is only needed 
    * to support older versions of Firefox.
@@ -65,11 +67,11 @@ export interface RunOptions {
    * --pref=general.useragent.locale=fr-FR). You can repeat this option to set more 
    * than one preference.
    */
-  pref?: string[] | undefined
+  pref?: readonly string[] | undefined
   /**
    * Launch firefox at specified page
    */
-  startUrl?: string[] | undefined
+  startUrl?: string | readonly string[] | undefined
   /**
    * Open the DevTools for the installed add-on (Firefox 106 and later)
    */
@@ -81,7 +83,7 @@ export interface RunOptions {
   /**
    * Additional CLI options passed to the Browser binary
    */
-  args?: string[] | undefined
+  args?: readonly string[] | undefined
   /**
    * Specify a custom path to the adb binary
    */
