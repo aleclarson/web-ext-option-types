@@ -55,9 +55,13 @@ cli
         ],
       ]
       const typeOverrides = {
+        'run/target': `BrowserTarget | readonly BrowserTarget[]`,
         'run/start-url': `string | readonly string[]`,
         'sign/channel': `'listed' | 'unlisted'`,
       }
+      const customTypes = dedent`
+        export type BrowserTarget = 'firefox-desktop' | 'firefox-android' | 'chromium'
+      `
 
       const interfaces = commands.map((command) =>
         renderInterface(
@@ -67,7 +71,7 @@ cli
         ),
       )
 
-      const output = interfaces.join('\n\n')
+      const output = customTypes + '\n\n' + interfaces.join('\n\n')
 
       if (options.output) {
         fs.writeFileSync(options.output, output + '\n')
