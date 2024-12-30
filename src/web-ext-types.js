@@ -55,6 +55,7 @@ cli
         ],
       ]
       const typeOverrides = {
+        'run/start-url': `string | readonly string[]`,
         'sign/channel': `'listed' | 'unlisted'`,
       }
 
