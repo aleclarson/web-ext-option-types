@@ -59,9 +59,13 @@ async function main() {
   await spawn('npm', ['version', nextVersion], { cwd: 'npm' })
 
   // Publish to npm
-  await spawn('npm', ['publish', args.dryRun ? '--dry-run' : ''], {
-    cwd: 'npm',
-  })
+  await spawn(
+    'npm',
+    ['publish', '--provenance', args.dryRun ? '--dry-run' : ''],
+    {
+      cwd: 'npm',
+    },
+  )
 
   // Commit and push changes
   await spawn('git', ['add', 'npm'])
