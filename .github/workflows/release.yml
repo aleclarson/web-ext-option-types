@@ -28,6 +28,10 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm build
+      - name: Setup git user
+        run: |
+          git config --global user.name "Alec Larson"
+          git config --global user.email "1925840+aleclarson@users.noreply.github.com"
       - name: Run release script
         run: pnpm run release
         env:
