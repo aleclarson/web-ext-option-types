@@ -41,7 +41,7 @@ export interface RunOptions {
    */
   keepProfileChanges?: boolean | undefined
   /**
-   * Reload the extension when source files change.Disable with --no-reload.
+   * Reload the extension when source files change. Disable with --no-reload.
    *
    * @default true
    */
