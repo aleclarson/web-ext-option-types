@@ -1,6 +1,6 @@
 {
   "name": "web-ext-option-types",
-  "version": "8.9.2",
+  "version": "8.9.3",
   "description": "Type definitions for web-ext CLI options",
   "main": "index.js",
   "types": "index.d.ts",
