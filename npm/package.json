@@ -1,6 +1,6 @@
 {
   "name": "web-ext-option-types",
-  "version": "8.10.3",
+  "version": "9.0.0",
   "description": "Type definitions for web-ext CLI options",
   "main": "index.js",
   "types": "index.d.ts",
@@ -10,6 +10,6 @@
   },
   "license": "MIT",
   "metadata": {
-    "web-ext.version": "8.10.0"
+    "web-ext.version": "9.0.0"
   }
 }
